@@ -2,7 +2,7 @@ require 'fileutils'
 include FileUtils
 
 desc "Install everything"
-task :everything => [:vim, :git] 
+task :everything => [:vim, :git, :shell] 
 
 desc "Install .vim" 
 task :vim do
@@ -14,6 +14,12 @@ end
 
 desc "Install git configs"
 task :git do
-  sh %q(move ~/.gitconfig ~/.gitconfig_bak) if File.exists?("~/.gitconfig")
+  sh %q(mv ~/.gitconfig ~/.gitconfig_bak) if File.exists?("~/.gitconfig")
   sh %q(ln -s `pwd`/gitconfig ~/.gitconfig)
+end
+
+desc "Install shell customizations"
+task :shell do
+  sh %q(mv ~/.alias ~/.alias_bak) if File.exists?("~/.alias")
+  sh %q(ln -s `pwd`/alias ~/.alias)
 end
