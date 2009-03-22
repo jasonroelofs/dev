@@ -1,0 +1,34 @@
+[user]
+	name = Jason Roelofs
+	email = jameskilton@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  dif = diff
+  cp = cherry-pick
+  unpushed = rev-list HEAD --pretty ^origin/master
+[merge]
+  tool = diff3
+[repack]
+  usedeltabaseoffset = true
+[core]
+  editor = vim
+  pager = "less -FRSX"
