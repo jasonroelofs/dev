@@ -1,0 +1,9 @@
+  	JFrame frame = new JFrame("Prototyping");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		JLabel panel = new JLabel("Hello world");
+
+		frame.getContentPane().add( panel );
+		frame.pack();
+		frame.setVisible(true);
+

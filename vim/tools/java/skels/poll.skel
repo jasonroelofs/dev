@@ -1,0 +1,8 @@
+		// poll for asynchronous event
+		for (int i=0; i < 5000; i+=20) {
+			if (condition)
+				break;
+			Thread.sleep(20);
+		}
+		assertTrue("condition not true", condition); 
+

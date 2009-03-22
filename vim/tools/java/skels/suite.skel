@@ -1,0 +1,24 @@
+	static boolean runall = true;
+	/**
+	 * Called by other test classes to build a suite of tests, or by a test
+	 * runner to execute the tests in this class.
+	 */
+	public static Test suite() {
+		// include all test methods in class
+
+		TestSuite suite = null;
+		if (runall) {
+			suite = new TestSuite(MYCLASS.class);
+			return suite;
+
+		} else {
+			// OR include just certain methods
+			suite = new TestSuite();
+
+			// RUN_SOME_HERE
+
+			return suite;
+		}
+	}
+
+

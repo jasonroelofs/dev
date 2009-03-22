@@ -1,0 +1,19 @@
+" ERB (rhtml)
+au BufNewFile,BufRead *.rhtml     setf rhtml
+au BufNewFile,BufRead Rakefile    setf ruby
+au BufNewFile,BufRead .sake       setf ruby
+au BufNewFile,BufRead Capfile    setf ruby
+au BufNewFile,BufRead *.rake    setf ruby
+au BufNewFile,BufRead *.rjs    setf ruby
+au BufNewFile,BufRead rakefile    setf ruby
+au BufNewFile,BufRead *.rake    setf ruby
+au BufNewFile,BufRead *.yml     setf ruby
+au BufNewFile,BufRead *.lzx			setf laszlo
+au BufNewFile,BufRead *.test     setf ruby
+au BufNewFile,BufRead *.vtl     setf html
+au BufNewFile,BufRead *.i     setf cpp
+au BufNewFile,BufRead *.erb     setf rhtml
+au BufNewFile,BufRead *.builder     setf ruby
+au BufNewFile,BufRead *.*pp     setf cpp
+au BufNewFile,BufRead *.rel     setf erlang
+au BufNewFile,BufRead *.app     setf erlang
