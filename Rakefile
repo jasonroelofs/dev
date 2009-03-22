@@ -14,5 +14,6 @@ end
 
 desc "Install git configs"
 task :git do
-  sh %q(cp gitconfig ~/.gitconfig)
+  sh %q(move ~/.gitconfig ~/.gitconfig_bak) if File.exists?("~/.gitconfig")
+  sh %q(ln -s `pwd`/gitconfig ~/.gitconfig)
 end
