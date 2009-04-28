@@ -12,7 +12,6 @@ alias ng="netstat -an | grep "
 
 alias gvi='gvim'
 alias givm='gvim'
-alias gvim='gvim -X'
 
 alias ls="ls --color"
 
