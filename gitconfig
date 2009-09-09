@@ -32,3 +32,5 @@
 [core]
   editor = vim
   pager = "less -FRSX"
+[push]
+	default = tracking
