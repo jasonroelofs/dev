@@ -226,6 +226,11 @@ rails-template-types	rails.txt	/*rails-template-types*
 rails-vim-integration	rails.txt	/*rails-vim-integration*
 rails.txt	rails.txt	/*rails.txt*
 taskpaper	taskpaper.txt	/*taskpaper*
+textile-changelog	textile.txt	/*textile-changelog*
+textile-commands	textile.txt	/*textile-commands*
+textile-credits	textile.txt	/*textile-credits*
+textile-requirements	textile.txt	/*textile-requirements*
+textile.txt	textile.txt	/*textile.txt*
 xml-plugin-callbacks	xml-plugin.txt	/*xml-plugin-callbacks*
 xml-plugin-html	xml-plugin.txt	/*xml-plugin-html*
 xml-plugin-mappings	xml-plugin.txt	/*xml-plugin-mappings*
