@@ -30,6 +30,10 @@
 :set title
 :set scrolloff=2
 :set wildmenu
+:set wildmode=list:longest
+:set expandtab
+
+:set completeopt=longest,menu
 
 
 " Do not highlight search match
