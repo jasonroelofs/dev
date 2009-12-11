@@ -70,8 +70,8 @@ let b:undo_ftplugin = "unlet! b:browsefilter b:match_words | " . s:undo_ftplugin
 let &cpo = s:save_cpo
 
 " Key abbreviations
-iabbr _rv <%= %><LEFT><LEFT><LEFT>
-iabbr _rc <% %><LEFT><LEFT><LEFT>
+iabbr _rv <%= -%><LEFT><LEFT><LEFT>
+iabbr _rc <% -%><LEFT><LEFT><LEFT>
 
 if has("unix")
   source ~/.vim/ftplugin/html.vim
