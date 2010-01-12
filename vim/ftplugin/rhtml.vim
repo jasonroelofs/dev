@@ -6,10 +6,6 @@
 
 if exists("b:did_ftplugin") | finish | endif
 
-iabbr _t <% %><Left><Left><Left>
-iabbr _et <%= %><Left><Left><Left>
-map ,r i<%= %><ESC>
-
 " Make sure the continuation lines below do not cause problems in
 " compatibility mode.
 let s:save_cpo = &cpo
@@ -70,8 +66,8 @@ let b:undo_ftplugin = "unlet! b:browsefilter b:match_words | " . s:undo_ftplugin
 let &cpo = s:save_cpo
 
 " Key abbreviations
-iabbr _rv <%= -%><LEFT><LEFT><LEFT>
-iabbr _rc <% -%><LEFT><LEFT><LEFT>
+iabbr _rv <%= -%><LEFT><LEFT><LEFT><LEFT>
+iabbr _rc <% -%><LEFT><LEFT><LEFT><LEFT>
 
 if has("unix")
   source ~/.vim/ftplugin/html.vim
