@@ -17,3 +17,4 @@ au BufNewFile,BufRead *.builder     setf ruby
 au BufNewFile,BufRead *.*pp     setf cpp
 au BufNewFile,BufRead *.rel     setf erlang
 au BufNewFile,BufRead *.app     setf erlang
+au BufNewFile,BufRead *.less     set filetype=less
