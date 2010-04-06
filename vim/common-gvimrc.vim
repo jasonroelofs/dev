@@ -2,7 +2,7 @@
 command -nargs=0 Zoom :macaction performZoom:
 
 " Setup the font (Bitstream on Linux, Lucida on Windows)
-:set guifont=Monaco:h13.00,Bitstream\ Vera\ Sans\ Mono\ 11,\ Lucida_Sans_Typewriter:h8:cANSI
+:set guifont=Monaco:h16.00,Bitstream\ Vera\ Sans\ Mono\ 11,\ Lucida_Sans_Typewriter:h8:cANSI
 
 " Set all gui options
 "   Options can be set or unset with
