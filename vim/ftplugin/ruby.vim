@@ -231,12 +231,12 @@ endfunction
 :cabbr rR :w:!ruby % \| more
 
 if has("unix")
-	noremap <F5> :only<CR>:w<CR>:!ruby -Itest '%' 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
+	noremap <F5> :only<CR>:w<CR>:!ruby -Ispec:test '%' 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
 else
-	noremap <F5> :only<CR>:w<CR>:!ruby -Itest '%' > "<C-R>=expand($HOME)<CR>/tmp/.rubyrun.out"<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
+	noremap <F5> :only<CR>:w<CR>:!ruby -Ispec:test '%' > "<C-R>=expand($HOME)<CR>/tmp/.rubyrun.out"<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
 endif
 
-noremap <F6> :only<CR>:w<CR>:!ruby -Itest '%'<CR>
+noremap <F6> :only<CR>:w<CR>:!ruby -Ispec:test '%'<CR>
 
 " Ruby syntax check
 :noremap <F4> :w<CR>:!ruby -c '%'<CR>
