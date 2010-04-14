@@ -16,6 +16,12 @@ let b:undo_ftplugin = "setl fo< com< cms< ofu<"
 
 let b:cucumber_root = expand('%:p:h:s?.*[\/]\%(features\|stories\)\zs[\/].*??')
 
+if has("unix")
+	noremap <F5> :only<CR>:w<CR>:!script/cucumber CULERITY_USING_RVM=TRUE --no-color '%' 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
+else
+	noremap <F5> :only<CR>:w<CR>:!script/cucumber CULERITY_USING_RVM=TRUE --no-color '%' > "<C-R>=expand($HOME)<CR>/tmp/.rubyrun.out"<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
+endif
+
 if !exists("g:no_plugin_maps") && !exists("g:no_cucumber_maps")
   nmap <silent><buffer> <C-]>       :<C-U>exe <SID>jump('edit',v:count)<CR>
   nmap <silent><buffer> <C-W>]      :<C-U>exe <SID>jump('split',v:count)<CR>
