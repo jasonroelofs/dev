@@ -32,7 +32,7 @@
 [repack]
   usedeltabaseoffset = true
 [core]
-  editor = vim
+  editor = /usr/bin/vim
   pager = "less -FRSX"
 [push]
 	default = tracking
