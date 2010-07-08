@@ -14,8 +14,10 @@ end
 
 desc "Install git configs"
 task :git do
-  sh %q(mv ~/.gitconfig ~/.gitconfig_bak) if File.exists?("~/.gitconfig")
-  sh %q(ln -s `pwd`/gitconfig ~/.gitconfig)
+  %w(gitconfig gitignore).each do |file|
+    sh %Q(mv ~/.#{file} ~/.#{file}_bak) if File.exists?("~/.#{file}")
+    sh %Q(ln -s `pwd`/#{file} ~/.#{file})
+  end
 end
 
 desc "Install shell customizations"

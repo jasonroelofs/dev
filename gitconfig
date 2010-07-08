@@ -28,11 +28,15 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset - %Cblue[%an]%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   pullr = pull --rebase
 [merge]
-  tool = diff3
+  tool = mvim
+[mergetool "mvim"]
+  cmd = mvim -d -g $LOCAL $MERGED $REMOTE
+  keepbackup = false
 [repack]
   usedeltabaseoffset = true
 [core]
   editor = /usr/bin/vim
   pager = "less -FRSX"
+  excludesfile = /Users/roelofs/.gitignore
 [push]
 	default = tracking
