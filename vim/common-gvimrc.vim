@@ -29,3 +29,8 @@ command -nargs=0 Zoom :macaction performZoom:
 
 :colorscheme vividchalk
 :highlight Normal guifg=white guibg=black
+
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-t> :CommandT<CR>
+endif
