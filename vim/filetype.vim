@@ -3,6 +3,7 @@ au BufNewFile,BufRead *.rhtml     setf rhtml
 au BufNewFile,BufRead Rakefile    setf ruby
 au BufNewFile,BufRead .sake       setf ruby
 au BufNewFile,BufRead Capfile    setf ruby
+au BufNewFile,BufRead Gemfile    setf ruby
 au BufNewFile,BufRead *.rake    setf ruby
 au BufNewFile,BufRead *.rjs    setf ruby
 au BufNewFile,BufRead rakefile    setf ruby
