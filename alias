@@ -12,11 +12,3 @@ alias ng="netstat -an | grep "
 
 alias gvi='gvim'
 alias givm='gvim'
-
-alias ls="ls --color"
-
-# SIGH @ UBUNTU
-alias sudo="sudo env PATH=$PATH"
-
-# Again, ubuntu packaging strikes again. "ack" is a japanese kanji converter tool >.<
-alias ack="ack-grep"
