@@ -7,6 +7,9 @@
 " syntax highlighting
 :syntax on
 
+" Pathogen
+call pathogen#runtime_append_all_bundles()
+
 "Share the system clipboard
 :set clipboard=unnamed
 :set incsearch
@@ -127,6 +130,7 @@ map ,dw :set wrap<CR>
 :noremap  \as :w! >> ~/snip<cr>
 
 " Activate and process ftplugin scripts
+:filetype off
 :filetype plugin on
 :filetype indent on 
 
@@ -139,5 +143,4 @@ map <F9> :only<CR>:w<CR>:!rake 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.ruby
 map <F10> :only<CR>:w<CR>:!rake test:units 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
 map <F11> :only<CR>:w<CR>:!rake test:integration 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
 map <F12> :only<CR>:w<CR>:!rake test:migration 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
-
 
