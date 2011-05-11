@@ -38,6 +38,12 @@ call pathogen#runtime_append_all_bundles()
 
 :set completeopt=longest,menu
 
+" Highlight extraneous whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " Do not highlight search match
 :set nohlsearch
