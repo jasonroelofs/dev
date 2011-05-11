@@ -13,9 +13,12 @@ au BufNewFile,BufRead *.lzx			setf laszlo
 au BufNewFile,BufRead *.test     setf ruby
 au BufNewFile,BufRead *.vtl     setf html
 au BufNewFile,BufRead *.i     setf cpp
+au BufNewFile,BufRead *.h     setf cpp
 au BufNewFile,BufRead *.erb     setf rhtml
 au BufNewFile,BufRead *.builder     setf ruby
 au BufNewFile,BufRead *.*pp     setf cpp
 au BufNewFile,BufRead *.rel     setf erlang
 au BufNewFile,BufRead *.app     setf erlang
 au BufNewFile,BufRead *.less     set filetype=less
+au BufNewFile,BufRead *.haml     setf haml
+au BufNewFile,BufRead *.sass     setf sass
