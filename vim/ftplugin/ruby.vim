@@ -58,9 +58,9 @@ if exists("&ofu") && has("ruby")
 endif
 
 " To activate, :set ballooneval
-if has('balloon_eval') && exists('+balloonexpr')
-  setlocal balloonexpr=RubyBalloonexpr()
-endif
+"if has('balloon_eval') && exists('+balloonexpr')
+  "setlocal balloonexpr=RubyBalloonexpr()
+"endif
 
 
 " TODO:
@@ -231,12 +231,12 @@ endfunction
 :cabbr rR :w:!ruby % \| more
 
 if has("unix")
-	noremap <F5> :only<CR>:w<CR>:!ruby -Ispec:test '%' 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
+	noremap <F5> :only<CR>:w<CR>:!env NO_COLOR_OUTPUT='true' ruby -Iapp:lib:spec:test '%' 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
 else
-	noremap <F5> :only<CR>:w<CR>:!ruby -Ispec:test '%' > "<C-R>=expand($HOME)<CR>/tmp/.rubyrun.out"<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
+	noremap <F5> :only<CR>:w<CR>:!env NO_COLOR_OUTPUT='true' ruby -Iapp:lib:spec:test '%' > "<C-R>=expand($HOME)<CR>/tmp/.rubyrun.out"<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
 endif
 
-noremap <F6> :only<CR>:w<CR>:!ruby -Ispec:test '%'<CR>
+noremap <F6> :only<CR>:w<CR>:!env NO_COLOR_OUTPUT='true' ruby -Ilib:spec:test '%'<CR>
 
 " Ruby syntax check
 :noremap <F4> :w<CR>:!ruby -c '%'<CR>
@@ -248,87 +248,22 @@ noremap <F6> :only<CR>:w<CR>:!ruby -Ispec:test '%'<CR>
 :noremap z :s/^/#<CR><Down>
 :noremap Z :s/^\s*\(#\)//<CR><Down>
 
-" Generate tags
-"set tags=<C-R>=system('ruby ~/.vim/tools/find_tags.rb ' . expand("%:p"))
-:let &tags = system("ruby ~/.vim/tools/find_tags.rb " . expand("%:p:h"))
-:cabbr rtags !ctags -f $PROJ_HOME/tags `find $PROJ_HOME -name "*.rb"`
-
-" Source code navigation tricksies
-let SourceNavigation='ruby ~/.vim/tools/ruby/source_navigation.rb'
-map \t :e <C-R>=system(SourceNavigation . ' test ' . expand("%:p"))<CR><CR>
-"map \k :e <C-R>=system(SourceNavigation . ' test ' . expand("%:p"))<CR><CR>
-map \s :e <C-R>=system(SourceNavigation . ' source ' . expand("%:p"))<CR><CR>
-map go :e <C-R>=system(SourceNavigation . ' object_def ' . expand("%:p") . ' ' . expand("<cword>"))<CR><CR><CR>
-map gy :e <C-R>=system(SourceNavigation . ' objects ' . expand("%:p"))<CR><CR>
-" Execute the tests for the current source file
-map <F7> <F2>\t<F5>\sG
-
 " Code coverage
 noremap <F8> :!rcov % --text-report<CR>
 
-iabbr _bp require 'breakpoint'; breakpoint
-
 " Unit test macros
-iabbr _sh should "work"<ESC>?work<CR>cw
-iabbr _ab assert_block
 iabbr _ae assert_equal
 iabbr _ane assert_not_equal
 iabbr _aid assert_in_delta expect, actual, delta, ""
 iabbr _ai assert_instance_of
 iabbr _ak assert_kind_of
 iabbr _am assert_match
-iabbr _anm assert_match
 iabbr _an assert_nil
 iabbr _ann assert_not_nil
-iabbr _ab assert_block
 iabbr _as assert_same
-iabbr _asu assert_response :success
 iabbr _ans assert_not_same
-iabbr _ar err = assert_raise RuntimeError doendassert_match(//i, err.message)
 iabbr _art assert_redirected_to
-iabbr _anr assert_nothing_raised RuntimeError  doend
-iabbr _at assert_tag :tag => ''OD
-iabbr _ant assert_nothing_thrown RuntimeError  doend
-iabbr _asl assert_select
-
-iabbr _er expect_and_return :mock, method, return, args<ESC>26<LEFT>
-iabbr _ex expect :mock, method, args<ESC>18<LEFT>
-iabbr _era expect_and_raise :mock, method, error, args<ESC>30<LEFT>
-
-" mock abbreviations
-iabbr _v verify_mocks
-
-iabbr _setup def setup<CR><CR>end<Up>
-iabbr _su def setup<CR><CR>end<Up><Tab>
-iabbr _teardown def teardown<CR><CR>end<Up><Tab>
-iabbr _td def teardown<CR><CR>end<Up><Tab>
-
-iabbr hhh #<CR> HELPERS<CR><CR><BS><BS><BS>
-iabbr ttt #<CR> TESTS<CR><CR><BS><BS><BS>
-
-" Expand the words on the selected lines into unit test case stubs
-noremap \ut :!ruby ~/.vim/tools/ruby/expand_test_cases.rb<CR>
-
-" Generate rdoc and open links browser on them
-noremap \rd :w<CR>:!rdoc<CR>:!links -g doc/index.html<CR>
 
 command! Systerize %s/[()_\.]/ /g
-
-" Stub out the beginnings of a ruby shell script
-:iabbr _rubyscript #!/usr/bin/rubyrequire 'fileutils'include FileUtils$here = File.expand_path(File.dirname(__FILE__))
-
-
-" Quick-fixers for converting old helpers_for_mock test code into CMock-style
-" expectations.
-map ex :s/expect\s*:\([^,]*\),\s*:\([^,]*\),\?\s*\(.*\)/@\1.expect.\2(\3)/<CR>
-map er :s/expect_and_return\s*:\([^,]*\),\s*:\([^,]*\),\s*\([^,]*\),\?\s*\(.*\)/@\1.expect.\2(\4).returns(\3)/<CR>
-map et :s/expect_and_raise\s*:\([^,]*\),\s*:\([^,]*\),\s*\([^,]*\),\?\s*\(.*\)/@\1.expect.\2(\4).raises(\3)/<CR>
-iabbr _here File.expand_path(File.dirname(__FILE__))
-
-" ERB Stuff
-iabbr _t <% %><Left><Left><Left>
-iabbr _et <%= %><Left><Left><Left>
-map ,r i<%= %><ESC>
-
 
 " vim: nowrap sw=2 sts=2 ts=8 ff=unix:

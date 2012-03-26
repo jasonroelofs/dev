@@ -22,3 +22,4 @@ au BufNewFile,BufRead *.app     setf erlang
 au BufNewFile,BufRead *.less     set filetype=less
 au BufNewFile,BufRead *.haml     setf haml
 au BufNewFile,BufRead *.sass     setf sass
+au BufNewFile,BufRead *.md     setf markdown

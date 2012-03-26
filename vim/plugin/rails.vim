@@ -3971,22 +3971,6 @@ function! s:BufAbbreviations()
     else
       let b:rails_abbreviations = b:rails_abbreviations . ":c\t:conditions => \n"
     endif
-    Rabbrev :i    :id\ =>\ 
-    Rabbrev :o    :object\ =>\ 
-    Rabbrev :p    :partial\ =>\ 
-    Rabbrev logd( logger.debug
-    Rabbrev logi( logger.info
-    Rabbrev logw( logger.warn
-    Rabbrev loge( logger.error
-    Rabbrev logf( logger.fatal
-    Rabbrev fi(   find
-    Rabbrev AR::  ActiveRecord
-    Rabbrev AV::  ActionView
-    Rabbrev AC::  ActionController
-    Rabbrev AS::  ActiveSupport
-    Rabbrev AM::  ActionMailer
-    Rabbrev AE::  ActiveResource
-    Rabbrev AWS:: ActionWebService
   endif
 endfunction
 
