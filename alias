@@ -1,14 +1,12 @@
-alias sup='svn up'
-alias sci='svn ci'
-alias st='svn st'
-alias sad='svn add'
-
-alias cap='USER=jroelofs cap'
-
-alias start-apache="sudo /etc/init.d/apache2 start"
-
 alias pg="ps aux | grep "
-alias ng="netstat -an | grep " 
+alias ng="netstat -an | grep "
 
-alias gvi='gvim'
-alias givm='gvim'
+alias mvi='mvim'
+alias mivm='mvim'
+
+alias it="git"
+alias cuc='bundle exec cucumber'
+
+alias gitup="git stash && git pullr && git stash pop"
+
+alias ls="ls -G"
