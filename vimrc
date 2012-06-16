@@ -11,6 +11,9 @@ set title
 
 let mapleader=","
 
+" Share system clipboard
+set clipboard=unnamed
+
 " Look and Feel
 syntax on
 set background=dark
@@ -61,7 +64,7 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " Custom File types handling
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,config.ru,*.rake} set ft=ruby
 au BufNewFile,BufRead *.json set ft=javascript
 
 """""""""""""""""""""""""""
@@ -88,6 +91,11 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Buffer management
+noremap  :bn
+noremap  :bp
+noremap  :bd
 
 " Make ',e' (in normal mode) give a prompt for opening files
 " in the same dir as the current buffer's file.
