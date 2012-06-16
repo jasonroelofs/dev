@@ -5,7 +5,7 @@ desc "Install everything"
 task :install do
   sh "mkdir -p ~/._backup"
 
-  %w(vim vimrc gvimrc gitconfig gitignore alias prompt).each do |name|
+  %w(vim vimrc gvimrc gitconfig gitignore alias prompt gemrc).each do |name|
     path = File.join(ENV["HOME"], ".#{name}")
     if File.file?(path) || File.directory?(path)
       sh %Q(mv ~/.#{name} ~/._backup/#{name})
