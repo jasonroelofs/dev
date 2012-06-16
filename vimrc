@@ -16,6 +16,7 @@ set clipboard=unnamed
 
 " Look and Feel
 syntax on
+colorscheme koehler
 set background=dark
 set number
 set ruler

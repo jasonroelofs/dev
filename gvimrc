@@ -30,7 +30,6 @@ command -nargs=0 Zoom :macaction performZoom:
 " Maximize both dimensions when going fullscreen
 :set fuopt=maxhorz,maxvert
 
-:colorscheme solarized
 :highlight Normal guifg=white guibg=black
 
 if has("gui_macvim")
