@@ -2,14 +2,14 @@ require 'fileutils'
 include FileUtils
 
 desc "Install everything"
-task :everything => [:vim, :git, :shell] 
+task :everything => [:vim, :git, :shell]
 
-desc "Install .vim" 
+desc "Install .vim"
 task :vim do
   sh %q(mv ~/.vim ~/.vim_bak) if File.directory?("~/.vim")
   sh %q(ln -s `pwd`/vim ~/.vim)
-  sh %q(echo "source ~/.vim/common-vimrc.vim" >> ~/.vimrc)
-  sh %q(echo "source ~/.vim/common-gvimrc.vim" >> ~/.gvimrc)
+  sh %q(ln -s `pwd`/vimrc ~/.vimrc)
+  sh %q(ln -s `pwd`/gvimrc ~/.gvimrc)
 end
 
 desc "Install git configs"
