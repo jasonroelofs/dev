@@ -7,7 +7,7 @@ task :install do
 
   %w(vim vimrc gvimrc gitconfig gitignore alias prompt gemrc).each do |name|
     path = File.join(ENV["HOME"], ".#{name}")
-    if File.file?(path) || File.directory?(path)
+    if (File.file?(path) || File.directory?(path)) && !File.symlink?(path)
       sh %Q(mv ~/.#{name} ~/._backup/#{name})
     end
 
