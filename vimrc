@@ -60,6 +60,10 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
+" Custom File types handling
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
+au BufNewFile,BufRead *.json set ft=javascript
+
 """""""""""""""""""""""""""
 """ Global key mappings """
 """""""""""""""""""""""""""
@@ -79,6 +83,12 @@ noremap k gk
 :map <leader>i mzggvG='z
 :map \ft :retab<CR>
 
+" Ctrl-h/j/k/l for easy window movement
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Make ',e' (in normal mode) give a prompt for opening files
 " in the same dir as the current buffer's file.
 if has("unix")
@@ -86,3 +96,15 @@ if has("unix")
 else
   map <leader>e :e <C-R>=expand("%:p:h") . "\\" <CR>
 endif
+
+""""""""""""""""""""""""""""
+""" Plugin Configuration """
+""""""""""""""""""""""""""""
+
+""" NERDTree """
+" Start in NerdTree if no file given on boot
+autocmd vimenter * if !argc() | NERDTree | endif
+nmap <leader>n :NERDTreeToggle<CR>
+let NERDTreeHijackNetrw = 0
+let NERDTreeMouseMode=2
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.class$', '\.o', '\~$']
