@@ -10,3 +10,5 @@ alias cuc='bundle exec cucumber'
 alias gitup="git stash && git pullr && git stash pop"
 
 alias ls="ls -G"
+
+alias cda="cdargs -a \`pwd\`"
