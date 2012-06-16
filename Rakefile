@@ -2,26 +2,17 @@ require 'fileutils'
 include FileUtils
 
 desc "Install everything"
-task :everything => [:vim, :git, :shell]
+task :install do
+  sh "mkdir -p ~/._backup"
 
-desc "Install .vim"
-task :vim do
-  sh %q(mv ~/.vim ~/.vim_bak) if File.directory?("~/.vim")
-  sh %q(ln -s `pwd`/vim ~/.vim)
-  sh %q(ln -s `pwd`/vimrc ~/.vimrc)
-  sh %q(ln -s `pwd`/gvimrc ~/.gvimrc)
-end
+  %w(vim vimrc gvimrc gitconfig gitignore alias prompt).each do |name|
+    path = File.join(ENV["HOME"], ".#{name}")
+    if File.file?(path) || File.directory?(path)
+      sh %Q(mv ~/.#{name} ~/._backup/#{name})
+    end
 
-desc "Install git configs"
-task :git do
-  %w(gitconfig gitignore).each do |file|
-    sh %Q(mv ~/.#{file} ~/.#{file}_bak) if File.exists?("~/.#{file}")
-    sh %Q(ln -s `pwd`/#{file} ~/.#{file})
+    if !File.symlink?(path)
+      sh %Q(ln -s `pwd`/#{name} ~/.#{name})
+    end
   end
-end
-
-desc "Install shell customizations"
-task :shell do
-  sh %q(mv ~/.alias ~/.alias_bak) if File.exists?("~/.alias")
-  sh %q(ln -s `pwd`/alias ~/.alias)
 end
