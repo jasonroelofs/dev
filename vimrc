@@ -108,3 +108,8 @@ nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHijackNetrw = 0
 let NERDTreeMouseMode=2
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.class$', '\.o', '\~$']
+
+""" Powerline """
+let g:Powerline_symbols='fancy'
+let g:Powerline_themer='skwp'
+let g:Powerline_colorscheme='skwp'
