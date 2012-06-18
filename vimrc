@@ -8,6 +8,7 @@ call pathogen#infect()
 set nocompatible
 set encoding=utf-8
 set title
+set hidden
 
 let mapleader=","
 
@@ -18,7 +19,6 @@ set clipboard=unnamed
 syntax on
 colorscheme koehler
 set background=dark
-set number
 set ruler
 
 " Turn off error / visual bell

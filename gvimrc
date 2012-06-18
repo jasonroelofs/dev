@@ -32,7 +32,8 @@ command -nargs=0 Zoom :macaction performZoom:
 
 :highlight Normal guifg=white guibg=black
 
-if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
-  map <D-t> :CommandT<CR>
-endif
+"if has("gui_macvim")
+  "macmenu &File.Print key=<nop>
+  "nmap <D-P> :LustyBufferExplorer<CR>
+  "nmap <D-p> :LustyFilesystemExplorer<CR>
+"endif
