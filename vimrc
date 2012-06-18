@@ -122,3 +122,8 @@ let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.class$', '\.o', '\~$']
 let g:Powerline_symbols='fancy'
 let g:Powerline_themer='skwp'
 let g:Powerline_colorscheme='skwp'
+
+""" CommandT """
+" Keybindings configured in gvimrc
+let g:CommandTMaxHeight=20
+let g:CommandTMatchWindowAtTop=1

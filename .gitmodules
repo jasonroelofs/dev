@@ -25,3 +25,6 @@
 [submodule "vim/bundle/rails"]
 	path = vim/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/commandT"]
+	path = vim/bundle/commandT
+	url = git://github.com/wincent/Command-T
