@@ -107,6 +107,11 @@ else
 endif
 
 """"""""""""""""""""""""""""
+""" File Type Assoc      """
+""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.md set filetype=markdown
+
+""""""""""""""""""""""""""""
 """ Plugin Configuration """
 """"""""""""""""""""""""""""
 
