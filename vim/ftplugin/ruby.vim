@@ -12,6 +12,10 @@ noremap <F4> :w<CR>:!ruby -c '%'<CR>
 noremap z :s/^/#<CR><Down>
 noremap Z :s/^\s*\(#\)//<CR><Down>
 
+" ERB helpers
+iabbr _rv <%= %><Esc>2<Left>i
+iabbr _rc <% %><Esc>2<Left>i
+
 " Test::Unit macros
 iabbr _ae assert_equal
 iabbr _ane assert_not_equal
