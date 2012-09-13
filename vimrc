@@ -106,6 +106,9 @@ else
   map <leader>e :e <C-R>=expand("%:p:h") . "\\" <CR>
 endif
 
+" Command for running `par` to format blocks of text
+map <leader>f {!}par w80qrg<cr>
+
 """"""""""""""""""""""""""""
 """ File Type Assoc      """
 """"""""""""""""""""""""""""
