@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/golang"]
+	path = vim/bundle/golang
+	url = git://github.com/jnwhiteh/vim-golang.git
