@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/roelofs/Development/collective/par8o-chef/cookbooks/users'
-let g:netrw_dirhist_2='/Users/roelofs/Development/collective/par8o-chef/cookbooks/users/recipes'
-let g:netrw_dirhist_3='/Users/roelofs/Development/collective/par8o-chef/cookbooks/essentials/attributes'
-let g:netrw_dirhist_4='/Users/roelofs/Development/collective/par8o/app/controllers/staff_affiliations'
-let g:netrw_dirhist_5='/Users/roelofs/Development/collective/par8o/config/settings'
-let g:netrw_dirhist_6='/Users/roelofs/Development/collective/par8o/config'
-let g:netrw_dirhist_7='/Users/roelofs/Development/collective/par8o-chef/cookbooks/newrelic/recipes'

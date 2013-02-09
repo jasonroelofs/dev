@@ -1,5 +1,0 @@
-ActionListener al = new ActionListener() {
-	public void actionPerformed(ActionEvent e)
-	{
-	}
-};
