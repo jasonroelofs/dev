@@ -2,13 +2,18 @@
 """ Vim Global Configs  """
 """""""""""""""""""""""""""
 
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 set nocompatible
 set encoding=utf-8
 set title
 set hidden
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+source ~/.vim/bundles.vim
+
+filetype plugin indent on
 
 let mapleader=","
 
@@ -45,10 +50,6 @@ set shiftwidth=2
 set shiftround
 set copyindent
 set preserveindent
-
-filetype on
-filetype indent on
-filetype plugin on
 
 " Command Tab completion
 set wildmenu
@@ -117,14 +118,6 @@ au BufNewFile,BufRead *.md set filetype=markdown
 """"""""""""""""""""""""""""
 """ Plugin Configuration """
 """"""""""""""""""""""""""""
-
-""" NERDTree """
-" Start in NerdTree if no file given on boot
-autocmd vimenter * if !argc() | NERDTree | endif
-nmap <leader>n :NERDTreeToggle<CR>
-let NERDTreeHijackNetrw = 0
-let NERDTreeMouseMode=2
-let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.class$', '\.o', '\~$']
 
 """ Powerline """
 let g:Powerline_symbols='fancy'
