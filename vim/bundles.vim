@@ -3,7 +3,7 @@ filetype off
 Bundle "gmarik/vundle"
 
 " Vim improvements
-Bundle "Command-T"
+Bundle "wincent/Command-T"
 Bundle "Lokaltog/powerline"
 Bundle "ervandew/supertab"
 Bundle "altercation/vim-colors-solarized"
