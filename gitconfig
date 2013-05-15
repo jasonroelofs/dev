@@ -28,6 +28,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset - %Cblue[%an]%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   pullr = pull --rebase
 [merge]
+  ff = only
   tool = mvim
 [mergetool "mvim"]
   cmd = mvim -d -g $LOCAL $MERGED $REMOTE
@@ -40,3 +41,6 @@
   excludesfile = /Users/roelofs/.gitignore
 [push]
 	default = tracking
+[branch]
+  autosetupmerge = true
+  autosetuprebase = always
