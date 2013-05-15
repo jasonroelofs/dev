@@ -114,6 +114,7 @@ map <leader>f {!}par w80qrg<cr>
 """ File Type Assoc      """
 """"""""""""""""""""""""""""
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl330
 
 """"""""""""""""""""""""""""
 """ Plugin Configuration """
