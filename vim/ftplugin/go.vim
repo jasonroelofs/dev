@@ -1,6 +1,10 @@
 " Run the current file with F5
 map <F5> :only<CR>:w<CR>:!go run '%' 2>&1 \| tee ~/tmp/.go-lang.out<CR>:sp ~/tmp/.go-lang.out<CR><CR>
-map <F4> :Fmt<CR>
+
+" Run a syntax check and display errors only
+map <F4> :w<CR>:!gofmt -e '%' 1>/dev/null<CR>
+
+" Reformat the current file using gofmt
 map <leader>f :Fmt<CR>
 
 " Go back to using real tabs, it's the Go Way
