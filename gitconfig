@@ -27,6 +27,7 @@
   unpushed = rev-list HEAD --pretty ^origin/master
   lg = log --graph --pretty=format:'%Cred%h%Creset - %Cblue[%an]%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   pullr = pull --rebase
+  initial-commit = commit --allow-empty -m 'Initial Commit'
 [merge]
   ff = only
   tool = mvim
