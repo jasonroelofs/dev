@@ -29,7 +29,6 @@
   pullr = pull --rebase
   initial-commit = commit --allow-empty -m 'Initial Commit'
 [merge]
-  ff = only
   tool = mvim
 [mergetool "mvim"]
   cmd = mvim -d -g $LOCAL $MERGED $REMOTE
@@ -41,7 +40,9 @@
   pager = "less -FRSX"
   excludesfile = /Users/roelofs/.gitignore
 [push]
-	default = tracking
+	default = simple
 [branch]
   autosetupmerge = true
   autosetuprebase = always
+[credential]
+	helper = osxkeychain
