@@ -2,9 +2,6 @@
 " Custom Ruby configuration "
 """""""""""""""""""""""""""""
 
-" Run the current file with F5
-noremap <F5> :only<CR>:w<CR>:!env NO_COLOR_OUTPUT='true' ruby -Iapp:lib:spec:test '%' 2>&1 \| tee ~/tmp/.rubyrun.out<CR>:sp ~/tmp/.rubyrun.out<CR><CR>
-
 " Run syntax check on the current file
 noremap <F4> :w<CR>:!ruby -c '%'<CR>
 

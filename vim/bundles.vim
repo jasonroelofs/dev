@@ -1,25 +1,34 @@
 filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle "gmarik/vundle"
+Plugin 'gmarik/Vundle.vim'
 
 " Vim improvements
-Bundle "wincent/Command-T"
-Bundle "Lokaltog/powerline"
-Bundle "ervandew/supertab"
-Bundle "altercation/vim-colors-solarized"
-Bundle "AndrewRadev/splitjoin.vim"
+Plugin 'wincent/Command-T'
+Plugin 'Lokaltog/powerline'
+Plugin 'ervandew/supertab'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 " tpope
-Bundle "tpope/vim-endwise"
-Bundle "tpope/vim-rails"
-Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-surround"
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
+
+Plugin 'emilford/vim-sweeter-vest'
 
 " Languages / Syntax
-Bundle "Syntastic"
-Bundle "jnwhiteh/vim-golang"
-Bundle "vim-ruby/vim-ruby"
-Bundle "kchmck/vim-coffee-script"
-Bundle "beyondmarc/glsl.vim"
-Bundle "rosstimson/bats.vim"
-Bundle "othree/html5.vim"
+Plugin 'Syntastic'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'beyondmarc/glsl.vim'
+Plugin 'rosstimson/bats.vim'
+Plugin 'othree/html5.vim'
+Plugin 'wting/rust.vim'
+Plugin 'nosami/Omnisharp'
+
+call vundle#end()

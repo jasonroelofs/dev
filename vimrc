@@ -8,9 +8,6 @@ set title
 set hidden
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 source ~/.vim/bundles.vim
 
 filetype plugin indent on
@@ -120,12 +117,23 @@ au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.fr
 """ Plugin Configuration """
 """"""""""""""""""""""""""""
 
+""" CommandT """
+" Keybindings configured in gvimrc
+let g:CommandTMaxHeight=20
+let g:CommandTMatchWindowAtTop=1
+
 """ Powerline """
 let g:Powerline_symbols='fancy'
 let g:Powerline_themer='skwp'
 let g:Powerline_colorscheme='skwp'
 
-""" CommandT """
-" Keybindings configured in gvimrc
-let g:CommandTMaxHeight=20
-let g:CommandTMatchWindowAtTop=1
+""" Omnisharp """
+let g:Omnisharp_stop_server=0
+
+""" Sweeter Vest """
+let g:clear_each_run = 1
+
+" Run the current file with F5
+noremap <F5> :SweeterVestRunFile<CR>
+noremap <F6> :SweeterVestRunContext<CR>
+
