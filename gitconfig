@@ -37,7 +37,7 @@
   usedeltabaseoffset = true
 [core]
   editor = /usr/bin/vim
-  pager = "less -FRSX"
+  pager = "less -FRX"
   excludesfile = /Users/roelofs/.gitignore
 [push]
 	default = simple
