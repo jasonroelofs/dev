@@ -30,5 +30,6 @@ Plugin 'rosstimson/bats.vim'
 Plugin 'othree/html5.vim'
 Plugin 'wting/rust.vim'
 Plugin 'nosami/Omnisharp'
+Plugin 'cespare/vim-toml'
 
 call vundle#end()
