@@ -21,7 +21,7 @@ Plugin 'emilford/vim-sweeter-vest'
 
 " Languages / Syntax
 Plugin 'Syntastic'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'beyondmarc/glsl.vim'
