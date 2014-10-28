@@ -36,7 +36,7 @@
 [repack]
   usedeltabaseoffset = true
 [core]
-  editor = /usr/bin/vim
+  editor = /usr/local/bin/vim
   pager = "less -FRX"
   excludesfile = /Users/roelofs/.gitignore
 [push]
