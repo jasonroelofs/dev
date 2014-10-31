@@ -138,4 +138,4 @@ noremap <F5> :SweeterVestRunFile<CR>
 noremap <F6> :SweeterVestRunContext<CR>
 
 """ YouCompleteMe """
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'rb': 1, 'go': 1, 'rs': 1, 'js': 1, 'coffee': 1 }
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'ruby': 1, 'go': 1, 'rust': 1, 'javascript': 1, 'coffee': 1 }
