@@ -129,13 +129,3 @@ let g:Powerline_colorscheme='skwp'
 
 """ Omnisharp """
 let g:Omnisharp_stop_server=0
-
-""" Sweeter Vest """
-let g:clear_each_run = 1
-
-" Run the current file with F5
-noremap <F5> :SweeterVestRunFile<CR>
-noremap <F6> :SweeterVestRunContext<CR>
-
-""" YouCompleteMe """
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'ruby': 1, 'go': 1, 'rust': 1, 'javascript': 1, 'coffee': 1 }

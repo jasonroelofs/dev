@@ -9,16 +9,12 @@ Plugin 'wincent/Command-T'
 Plugin 'Lokaltog/powerline'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
 
 " tpope
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
-
-" Misc
-Plugin 'emilford/vim-sweeter-vest'
 
 " Languages / Syntax
 Plugin 'scrooloose/Syntastic'
