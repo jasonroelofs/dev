@@ -127,5 +127,21 @@ let g:Powerline_symbols='fancy'
 let g:Powerline_themer='skwp'
 let g:Powerline_colorscheme='skwp'
 
-""" Omnisharp """
-let g:Omnisharp_stop_server=0
+""" Syntastic """
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
+" Disable automatic checking on :w for some filetypes that are
+" just annoyingly slow to run.
+let g:syntastic_mode_map = { "passive_filetypes": ["slim"] }
+
+""" Sweeter Vest """
+let g:clear_each_run=1
+let g:sweeter_vest_skip_mappings=1
+
+nnoremap <F5> :SweeterVestRunFile<cr>
+nnoremap <F6> :SweeterVestRunTest<cr>
