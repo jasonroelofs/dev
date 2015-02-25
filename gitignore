@@ -6,3 +6,4 @@ proto
 .powrc
 .powenv
 .foreman
+.ruby-version
