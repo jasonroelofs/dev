@@ -9,6 +9,7 @@ Plugin 'wincent/Command-T'
 Plugin 'Lokaltog/powerline'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'emilford/vim-sweeter-vest'
 
 " tpope
 Plugin 'tpope/vim-endwise'

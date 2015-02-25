@@ -37,3 +37,12 @@ if has("gui_macvim")
   nmap <D-p> :CommandT<CR>
   nmap <D-P> :CommandTBuffer<CR>
 endif
+
+"""""""""""""""""""""""""""""
+""" Plugin Initialization """
+"""""""""""""""""""""""""""""
+
+""" SweeterVest """
+
+" Ensure dispatch is always turned on if we're in MacVim
+let g:use_dispatch=1
