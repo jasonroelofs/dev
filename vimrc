@@ -132,12 +132,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_wq = 0
 
 " Disable automatic checking on :w for some filetypes that are
 " just annoyingly slow to run.
-let g:syntastic_mode_map = { "passive_filetypes": ["slim"] }
+let g:syntastic_mode_map = { "passive_filetypes": ["slim", "sass", "scss"] }
 
 """ Sweeter Vest """
 let g:clear_each_run=1
