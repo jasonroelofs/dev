@@ -117,10 +117,15 @@ au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.fr
 """ Plugin Configuration """
 """"""""""""""""""""""""""""
 
-""" CommandT """
-" Keybindings configured in gvimrc
-let g:CommandTMaxHeight=20
-let g:CommandTMatchWindowAtTop=1
+""" Ag """
+set grepprg=ag\ --nogroup\ --nocolor
+
+""" Ctrl-P """
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+let g:ctrlp_match_window = 'top,order:ttb'
 
 """ Powerline """
 let g:Powerline_symbols='fancy'

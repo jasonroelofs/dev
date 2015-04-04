@@ -5,7 +5,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Vim improvements
-Plugin 'wincent/Command-T'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'

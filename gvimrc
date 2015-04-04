@@ -32,15 +32,18 @@ command -nargs=0 Zoom :macaction performZoom:
 
 :highlight Normal guifg=white guibg=black
 
-if has("gui_macvim")
-  macmenu &File.Print key=<nop>
-  nmap <D-p> :CommandT<CR>
-  nmap <D-P> :CommandTBuffer<CR>
-endif
-
 """""""""""""""""""""""""""""
 """ Plugin Initialization """
 """""""""""""""""""""""""""""
+
+""" CtrlP """
+
+" I want Command+p!
+if has("gui_macvim")
+  macmenu &File.Print key=<nop>
+  nmap <D-p> :CtrlP<CR>
+  nmap <D-P> :CtrlPBuffer<CR>
+endif
 
 """ SweeterVest """
 
