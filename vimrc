@@ -8,6 +8,7 @@ set title
 set hidden
 
 filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
 source ~/.vim/bundles.vim
 
 filetype plugin indent on
