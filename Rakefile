@@ -14,5 +14,13 @@ task :install do
     if !File.symlink?(path)
       sh %Q(ln -s `pwd`/#{name} ~/.#{name})
     end
+
+    [
+      # Enable Bundles in Mail
+      "defaults write ~/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist EnableBundles -bool true",
+      "defaults write ~/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist BundleCompatibilityVersion -int 4"
+    ].each do |option|
+      sh option
+    end
   end
 end
