@@ -1,3 +1,5 @@
+#!/bin/sh
+
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -6,7 +8,7 @@ parse_git_dirty () {
  if [[ $((git status 2> /dev/null) | tail -n1) = "" ]]; then
    echo ""
  elif [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit (working directory clean)" ]]; then
-   echo "✗"
+   echo " ✗"
  else
    echo ""
  fi
@@ -16,5 +18,6 @@ LIGHT_CYAN="\[\033[1;36m\]"
 YELLOW="\[\033[1;33m\]"
 LIGHT_RED="\[\033[1;31m\]"
 WHITE="\[\033[1;37m\]"
+RESET="\[\033[0m\]"
 
-export PS1="$LIGHT_CYAN\u@\h:$YELLOW\w $LIGHT_RED\$(parse_git_branch)$YELLOW\n] $WHITE"
+export PS1="$LIGHT_CYAN\u@\h:$YELLOW\w $LIGHT_RED\$(parse_git_branch)$(parse_git_dirty)$YELLOW\n] $RESET"
