@@ -41,6 +41,7 @@ command -nargs=0 Zoom :macaction performZoom:
 " I want Command+p!
 if has("gui_macvim")
   macmenu &File.Print key=<nop>
+  let g:ctrlp_map = '<D-p>'
   nmap <D-p> :CtrlP<CR>
   nmap <D-P> :CtrlPBuffer<CR>
 endif

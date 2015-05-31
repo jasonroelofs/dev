@@ -127,6 +127,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_match_window = 'top,order:ttb'
+let g:ctrlp_map = '<D-p>'
 
 """ Powerline """
 let g:Powerline_symbols='fancy'
