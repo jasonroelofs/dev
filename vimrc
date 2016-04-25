@@ -63,10 +63,6 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
-" Custom File types handling
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,config.ru,*.rake} set ft=ruby
-au BufNewFile,BufRead *.json set ft=javascript
-
 """""""""""""""""""""""""""
 """ Global key mappings """
 """""""""""""""""""""""""""
@@ -111,8 +107,11 @@ map <leader>f {!}par w80qrg<cr>
 """"""""""""""""""""""""""""
 """ File Type Assoc      """
 """"""""""""""""""""""""""""
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,config.ru,*.rake} set ft=ruby
+au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl330
+au BufRead,BufNewFile *.tpl,*.incl set ft=smarty
 
 """"""""""""""""""""""""""""
 """ Plugin Configuration """

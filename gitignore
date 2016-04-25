@@ -7,3 +7,4 @@ proto
 .powenv
 .foreman
 .ruby-version
+.sass-cache

@@ -16,6 +16,12 @@ fi
 
 export EDITOR=vim
 
+# Always start Vagrant with vmware
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+
+# No homebrew, you cannot send analytics
+export HOMEBREW_NO_ANALYTICS=1
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
