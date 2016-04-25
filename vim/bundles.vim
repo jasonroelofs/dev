@@ -27,5 +27,7 @@ Plugin 'othree/html5.vim'
 Plugin 'wting/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'slim-template/vim-slim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'markcornick/vim-terraform'
 
 call vundle#end()
