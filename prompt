@@ -7,7 +7,7 @@ parse_git_branch() {
 parse_git_dirty () {
  if [[ $((git status 2> /dev/null) | tail -n1) = "" ]]; then
    echo ""
- elif [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit (working directory clean)" ]]; then
+ elif [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit, working directory clean" ]]; then
    echo " ✗"
  else
    echo ""
