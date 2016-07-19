@@ -22,6 +22,9 @@ export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 # No homebrew, you cannot send analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# Never ever ever ever EVER run Spring on a Rails project
+export DISABLE_SPRING=1
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
