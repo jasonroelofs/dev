@@ -19,15 +19,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 
 " Languages / Syntax
-Plugin 'scrooloose/Syntastic'
-Plugin 'fatih/vim-go'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'othree/html5.vim'
-Plugin 'wting/rust.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'slim-template/vim-slim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'markcornick/vim-terraform'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
