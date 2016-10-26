@@ -28,6 +28,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset - %Cblue[%an]%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   pullr = pull --rebase
   initial-commit = commit --allow-empty -m 'Initial Commit'
+  shove = push --force-with-lease
 [merge]
   tool = mvim
 [mergetool "mvim"]
