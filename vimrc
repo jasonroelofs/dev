@@ -112,6 +112,7 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl330
 au BufRead,BufNewFile *.tpl,*.incl set ft=smarty
+au BufRead,BufNewFile *.red set ft=rebol
 
 """"""""""""""""""""""""""""
 """ Plugin Configuration """
