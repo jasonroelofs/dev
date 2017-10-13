@@ -25,6 +25,9 @@ export HOMEBREW_NO_ANALYTICS=1
 # Never ever ever ever EVER run Spring on a Rails project
 export DISABLE_SPRING=1
 
+# Enable kernel history in Erlang/Elixir (OTP 20 and later)
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
