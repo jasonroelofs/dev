@@ -78,6 +78,9 @@ noremap k gk
 " Clear out all extra whitespace in a file
 :map <leader>s :%s/\s\+$//<CR>
 
+" Close all other splits than mine
+:map <leader>o :only<CR>
+
 " Format entire buffer with indents
 :map <leader>i mzggvG='z
 :map \ft :retab<CR>
@@ -103,6 +106,9 @@ endif
 
 " Command for running `par` to format blocks of text
 map <leader>f {!}par w80qrg<cr>
+
+" Keep scratch buffer from showing up in autocomplete calls
+set completeopt-=preview
 
 """"""""""""""""""""""""""""
 """ File Type Assoc      """
@@ -136,7 +142,6 @@ let g:Powerline_colorscheme='skwp'
 
 """ Syntastic """
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_auto_loc_list = 0
@@ -146,9 +151,5 @@ let g:syntastic_check_on_wq = 0
 " just annoyingly slow to run.
 let g:syntastic_mode_map = { "passive_filetypes": ["slim", "sass", "scss"] }
 
-""" Sweeter Vest """
-let g:clear_each_run=1
-let g:sweeter_vest_skip_mappings=1
-
-nnoremap <F5> :SweeterVestRunFile<cr>
-nnoremap <F6> :SweeterVestRunTest<cr>
+""" Deoplete """
+let g:deoplete#enable_at_startup = 1

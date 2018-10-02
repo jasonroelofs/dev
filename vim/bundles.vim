@@ -10,15 +10,20 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'emilford/vim-sweeter-vest'
 
 " tpope
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-dispatch'
 
 " Languages / Syntax
 Plugin 'sheerun/vim-polyglot'
+
+" Go
+Plugin 'fatih/vim-go'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'zchee/deoplete-go'
 
 call vundle#end()

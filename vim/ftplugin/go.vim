@@ -1,11 +1,8 @@
-" Go back to using real tabs, it's the Go Way
-set noexpandtab
-
 " Easy commenting / uncommenting
-" map z :s/^/\/\/<CR><Down>
-" map Z :s/^\s*\(\/\/\)//<CR><Down>
+map z :s/^/\/\/<CR><Down>
+map Z :s/^\s*\(\/\/\)//<CR><Down>
 
-map <leader>t <Plug>(go-test)
+map <leader>t :GoTest<CR>
 
 " Test generation macros
 iabbr _test func Test_(t *testing.T) {<ESC>16<LEFT>s
