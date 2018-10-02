@@ -20,4 +20,12 @@ LIGHT_RED="\[\033[1;31m\]"
 WHITE="\[\033[1;37m\]"
 RESET="\[\033[0m\]"
 
+# Set up things so bash history remembers across terminals
+# http://lpetr.org/blog/archives/preserve-bash-history
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
 export PS1="$LIGHT_CYAN\u@\h:$YELLOW\w $LIGHT_RED\$(parse_git_branch)$(parse_git_dirty)$YELLOW\n] $RESET"
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
