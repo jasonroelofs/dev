@@ -28,6 +28,11 @@ export DISABLE_SPRING=1
 # Enable kernel history in Erlang/Elixir (OTP 20 and later)
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# Client-specific environment variables that we don't check into `dev`
+if [ -f ~/.client-env ]; then
+  . ~/.client-env
+fi
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi

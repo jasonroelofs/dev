@@ -2,7 +2,6 @@
 .rvmrc
 *.rbc
 .*.swp
-proto
 .powrc
 .powenv
 .foreman

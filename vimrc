@@ -119,6 +119,9 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl330
 au BufRead,BufNewFile *.tpl,*.incl set ft=smarty
 au BufRead,BufNewFile *.red set ft=rebol
+" TEMP! Until I figure out a name for my new language
+" and put together its own syntax highlighting
+au BufRead,BufNewFile *.lang set ft=ruby
 
 """"""""""""""""""""""""""""
 """ Plugin Configuration """
