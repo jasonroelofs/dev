@@ -1,6 +1,9 @@
 [user]
 	name = Jason Roelofs
 	email = jasongroelofs@gmail.com
+	signingkey = 1157F583
+[github]
+  user = jasonroelofs
 [color]
 	diff = auto
 	status = auto
@@ -46,4 +49,11 @@
   autosetupmerge = true
   autosetuprebase = always
 [credential]
+	helper = osxkeychain
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[credentials]
 	helper = osxkeychain
