@@ -16,6 +16,12 @@ task :install do
     end
   end
 
+  puts "Setting up Python for MacVim + deoplete. Python3 required"
+  sh "python3 -m pip install pynvim"
+
+  puts "Install Vundle for vim plugin management"
+  sh "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
+
   [
     # Enable Bundles in Mail
     "defaults write ~/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist EnableBundles -bool true",
@@ -23,4 +29,6 @@ task :install do
   ].each do |option|
     sh option
   end
+
+  puts "", "Ready! Jump into vim and run :BundleInstall to get all plugins", ""
 end
