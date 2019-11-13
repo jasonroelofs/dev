@@ -132,9 +132,10 @@ set grepprg=ag\ --nogroup\ --nocolor
 
 """ Ctrl-P """
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_show_hidden = 0
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+let g:ctrlp_use_caching = 1
+let g:ctrlp_max_files = 150000
 let g:ctrlp_match_window = 'top,order:ttb'
 let g:ctrlp_map = '<D-p>'
 
@@ -155,4 +156,26 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { "passive_filetypes": ["slim", "sass", "scss"] }
 
 """ Deoplete """
+let g:python3_host_prog = "/usr/local/bin/python3"
 let g:deoplete#enable_at_startup = 1
+
+""" Ale """
+let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_fix_on_save = 1
+
+" Sorbet "
+if fnamemodify(getcwd(), ':p') == $HOME.'/stripe/pay-server/'
+  call ale#linter#Define('ruby', {
+  \ 'name': 'sorbet-lsp',
+  \ 'lsp': 'stdio',
+  \ 'executable': 'true',
+  \ 'command': 'pay exec scripts/bin/typecheck --lsp -v',
+  \ 'language': 'ruby',
+  \ 'project_root': $HOME . '/stripe/pay-server',
+  \ })
+
+  let g:ale_linters = {'ruby': ['sorbet-lsp']}
+end
+
+" Bind <leader>d to go-to-definition.
+nmap <leader>d <Plug>(ale_go_to_definition)
