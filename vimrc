@@ -160,7 +160,10 @@ let g:python3_host_prog = "/usr/local/bin/python3"
 let g:deoplete#enable_at_startup = 1
 
 """ Ale """
-let g:ale_fixers = { 'javascript': ['eslint'] }
+let g:ale_linters = {}
+let g:ale_fixers = {}
+let g:ale_linters.javascript = ['eslint']
+let g:ale_fixers.javascript = ['eslint']
 let g:ale_fix_on_save = 1
 
 " Sorbet "
@@ -174,7 +177,7 @@ if fnamemodify(getcwd(), ':p') == $HOME.'/stripe/pay-server/'
   \ 'project_root': $HOME . '/stripe/pay-server',
   \ })
 
-  let g:ale_linters = {'ruby': ['sorbet-lsp']}
+  let g:ale_linters.ruby = ['sorbet-lsp']
 end
 
 " Bind <leader>d to go-to-definition.
