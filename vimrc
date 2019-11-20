@@ -180,5 +180,5 @@ if fnamemodify(getcwd(), ':p') == $HOME.'/stripe/pay-server/'
   let g:ale_linters.ruby = ['sorbet-lsp']
 end
 
-" Bind <leader>d to go-to-definition.
-nmap <leader>d <Plug>(ale_go_to_definition)
+""" Go """
+let g:go_fmt_command = "goimports"

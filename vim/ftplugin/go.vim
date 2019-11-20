@@ -2,7 +2,8 @@
 map z :s/^/\/\/<CR><Down>
 map Z :s/^\s*\(\/\/\)//<CR><Down>
 
-map <leader>t :GoTest<CR>
+nmap <leader>t :GoTest<CR>
+nmap <leader>d :GoDef<CR>
 
 " Test generation macros
 iabbr _test func Test_(t *testing.T) {<ESC>16<LEFT>s
