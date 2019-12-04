@@ -135,9 +135,10 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_use_caching = 1
-let g:ctrlp_max_files = 150000
+let g:ctrlp_max_files = 200000
 let g:ctrlp_match_window = 'top,order:ttb'
 let g:ctrlp_map = '<D-p>'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 """ Powerline """
 let g:Powerline_symbols='fancy'
@@ -184,3 +185,4 @@ end
 
 """ Go """
 let g:go_fmt_command = "goimports"
+let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
