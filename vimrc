@@ -159,6 +159,8 @@ let g:syntastic_mode_map = { "passive_filetypes": ["slim", "sass", "scss"] }
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:deoplete#enable_at_startup = 1
 
+autocmd FileType text,markdown call deoplete#custom#buffer_option('auto_complete', v:false)
+
 """ Ale """
 let g:ale_linters = {}
 let g:ale_fixers = {}
