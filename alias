@@ -5,7 +5,6 @@ alias mvi='mvim'
 alias mivm='mvim'
 
 alias it="git"
-alias cuc='bundle exec cucumber'
 
 alias gitup="git stash && git pullr && git stash pop"
 
