@@ -113,32 +113,14 @@ set completeopt-=preview
 """"""""""""""""""""""""""""
 """ File Type Assoc      """
 """"""""""""""""""""""""""""
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,config.ru,*.rake} set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,*.rake} set ft=ruby
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl330
-au BufRead,BufNewFile *.tpl,*.incl set ft=smarty
-au BufRead,BufNewFile *.red set ft=rebol
-" TEMP! Until I figure out a name for my new language
-" and put together its own syntax highlighting
-au BufRead,BufNewFile *.lang set ft=ruby
 
 """"""""""""""""""""""""""""
 """ Plugin Configuration """
 """"""""""""""""""""""""""""
-
-""" Ag """
-set grepprg=ag\ --nogroup\ --nocolor
-
-""" Ctrl-P """
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_show_hidden = 0
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:ctrlp_use_caching = 1
-let g:ctrlp_max_files = 200000
-let g:ctrlp_match_window = 'top,order:ttb'
-let g:ctrlp_map = '<D-p>'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 """ Powerline """
 let g:Powerline_symbols='fancy'
@@ -155,35 +137,3 @@ let g:syntastic_check_on_wq = 0
 " Disable automatic checking on :w for some filetypes that are
 " just annoyingly slow to run.
 let g:syntastic_mode_map = { "passive_filetypes": ["slim", "sass", "scss"] }
-
-""" Deoplete """
-let g:python3_host_prog = "/usr/local/bin/python3"
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('auto_complete_delay', 200)
-
-autocmd FileType text,markdown call deoplete#custom#buffer_option('auto_complete', v:false)
-
-""" Ale """
-let g:ale_linters = {}
-let g:ale_fixers = {}
-let g:ale_linters.javascript = ['eslint']
-let g:ale_fixers.javascript = ['eslint']
-let g:ale_fix_on_save = 1
-
-" Sorbet "
-if fnamemodify(getcwd(), ':p') == $HOME.'/stripe/pay-server/'
-  call ale#linter#Define('ruby', {
-  \ 'name': 'sorbet-lsp',
-  \ 'lsp': 'stdio',
-  \ 'executable': 'true',
-  \ 'command': 'pay exec scripts/bin/typecheck --lsp -v',
-  \ 'language': 'ruby',
-  \ 'project_root': $HOME . '/stripe/pay-server',
-  \ })
-
-  let g:ale_linters.ruby = ['sorbet-lsp']
-end
-
-""" Go """
-let g:go_fmt_command = "goimports"
-let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'

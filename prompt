@@ -28,4 +28,3 @@ export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
 export PS1="$LIGHT_CYAN\u@\h:$YELLOW\w $LIGHT_RED\$(parse_git_branch)$(parse_git_dirty)$YELLOW\n] $RESET"
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"

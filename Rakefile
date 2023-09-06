@@ -22,13 +22,5 @@ task :install do
   puts "Install Vundle for vim plugin management"
   sh "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim"
 
-  [
-    # Enable Bundles in Mail
-    "defaults write ~/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist EnableBundles -bool true",
-    "defaults write ~/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist BundleCompatibilityVersion -int 4"
-  ].each do |option|
-    sh option
-  end
-
   puts "", "Ready! Jump into vim and run :BundleInstall to get all plugins", ""
 end
