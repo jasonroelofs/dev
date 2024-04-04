@@ -25,6 +25,3 @@ iabbr _ann assert_not_nil
 iabbr _as assert_same
 iabbr _ans assert_not_same
 iabbr _art assert_redirected_to
-
-" Bind <leader>d to go-to-definition.
-nmap <leader>d <Plug>(ale_go_to_definition)
