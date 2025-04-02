@@ -131,7 +131,7 @@ set completeopt-=preview
 """ File Type Assoc      """
 """"""""""""""""""""""""""""
 au BufRead,BufNewFile {Gemfile,Rakefile,*.rake} set ft=ruby
-au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.json set ft=jsonc
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.vp,*.fp,*.gp,*.vs,*.fs,*.gs,*.tcs,*.tes,*.cs,*.vert,*.frag,*.geom,*.tess,*.shd,*.gls,*.glsl set filetype=glsl330
 
