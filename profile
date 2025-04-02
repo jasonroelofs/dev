@@ -8,11 +8,14 @@ fi
 
 # No homebrew, you cannot send analytics
 export HOMEBREW_NO_ANALYTICS=1
-export PATH="/opt/homebrew/bin:/Users/jasonroelofs/.volta/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 if [ -f `brew --prefix`/etc/profile.d/bash_completion.sh ]; then
   . `brew --prefix`/etc/profile.d/bash_completion.sh
 fi
+
+# Git bash completion
+. /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 
 export EDITOR=vim
 
@@ -25,10 +28,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # Make mvim available on the command line
 export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
 
-# Ruby from Homebrew
-export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+# GOPATH/bin
+export PATH="$HOME/go/bin:$PATH"
 
 # Client-specific environment variables that we don't check into `dev`
 if [ -f ~/.client-env ]; then

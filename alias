@@ -9,3 +9,5 @@ alias it="git"
 alias gitup="git stash && git pullr && git stash pop"
 
 alias ls="ls -G"
+
+alias psql="/opt/homebrew/opt/postgresql@17/bin/psql"
