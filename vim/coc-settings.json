@@ -1,3 +1,10 @@
 {
-  "elixir.pathToElixirLS": "/opt/homebrew/bin/elixir-ls"
+  "codeLens.enable": true,
+  "elixir.pathToElixirLS": "/opt/homebrew/bin/elixir-ls",
+  "languageserver": {
+    "slint": {
+      "filetypes": ["slint"],
+      "command": "slint-lsp"
+    }
+  }
 }

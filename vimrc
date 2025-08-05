@@ -15,6 +15,7 @@ Plug 'Lokaltog/powerline'
 Plug 'altercation/vim-colors-solarized'
 
 " tpope
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
@@ -28,6 +29,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
+
+" Slint
+Plug 'slint-ui/vim-slint'
 
 call plug#end()
 

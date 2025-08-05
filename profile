@@ -31,6 +31,9 @@ export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
 # GOPATH/bin
 export PATH="$HOME/go/bin:$PATH"
 
+# Cargo / Rust binaries
+export PATH="$HOME/.cargo/bin:$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin/:$PATH"
+
 # Client-specific environment variables that we don't check into `dev`
 if [ -f ~/.client-env ]; then
   . ~/.client-env
