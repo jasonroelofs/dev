@@ -5,6 +5,11 @@
     "slint": {
       "filetypes": ["slint"],
       "command": "slint-lsp"
+    },
+    "ruby": {
+      "filetypes": ["ruby"],
+      "rootPatterns": ["Gemfile"],
+      "command": "ruby-lsp"
     }
   }
 }
